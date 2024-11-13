@@ -32,7 +32,7 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/GateraAR_Build.loader.js";
       var config = {
-        dataUrl: buildUrl + "/609ea33c847e0301e3f3b52109af30a1.data",
+        dataUrl: buildUrl + "/06ad842f251dae6c23ba6c4e0df71253.data",
         frameworkUrl: buildUrl + "/0e5d55b600f3800eec7604c8c19c797c.js",
         codeUrl: buildUrl + "/885b701e0f49f1da02e774cb069ded20.wasm",
         streamingAssetsUrl: "StreamingAssets",
@@ -72,22 +72,6 @@
       };
       document.body.appendChild(script);
 
-      let enterARButton = document.getElementById('enterar');
-      let enterVRButton = document.getElementById('entervr');
-
-      document.addEventListener('onARSupportedCheck', function (event) {
-        enterARButton.disabled = !event.detail.supported;
-      }, false);
-      document.addEventListener('onVRSupportedCheck', function (event) {
-        enterVRButton.disabled = !event.detail.supported;
-      }, false);
-
-      enterARButton.addEventListener('click', function (event) {
-        unityInstance.Module.WebXR.toggleAR();
-      }, false);
-      enterVRButton.addEventListener('click', function (event) {
-        unityInstance.Module.WebXR.toggleVR();
-      }, false);
     </script>
   </body>
 </html>
